@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.toggle_btn {
+    display: none;
+    cursor: pointer;
+}
+
+.toggle_menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links ul {
+    display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+}
+
+.links li a {
+    text-decoration: none;
+    color: #030712;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.links li a:hover {
+    color: #6b7280;
+    border-bottom: 4px solid #6b7280;
+}
+
+main {
+    background-color: #f3f3f3;
+    height: 70vh;
+}
+
+.first_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+
+}
+
+.first_section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    animation: moveAndChangeColor 5s infinite;
+
+}
+
+@keyframes moveAndChangeColor {
+    0% {
+        transform: translateX(-100px);
+        color: #030712;
+    }
+
+    50% {
+        transform: translateX(0);
+        color: palevioletred;
+    }
+
+    100% {
+        transform: translateX(100px);
+        color: plum;
+    }
+}
+
+.first_section p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+
+}
+
+.my_socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 1.25rem;
+}
+
+.my_socials button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+}
+
+.about_section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: plum;
+    align-items: center;
+}
+
+.first-div {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.second-div img {
+    border-radius: 40%;
+    max-width: 100%;
+    margin-right: 40px;
+    height: auto;
+
+}
+
+.my_skillsets h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.my_skillsets p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 10px;
+}
+
+.tools .tool1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.tools i {
+    display: block;
+    font-size: 2rem;
+}
+
+.tools img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.projects_container{
+    display: flex;
+        flex-direction: column;
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0 2.5rem;
+}
+
+section h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.projects{
+    width: 80%;
+        max-width: 600px;
+        background-color: palevioletred;
+        border-radius: 10px;
+        overflow: hidden;
+}
+
+.projectcards{
+    height: 10rem;
+    margin: 0 1rem;
+}
+
+.projectcards h3{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.projectcards p{
+    font-size: 1rem;
+}
+
+.projects img{
+    width: 100%;
+    height: auto;
+}
+
+.projectcards a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    padding: 0 0.5rem;
+    background-color: black;
+    border-radius: 1rem;
+    scale: 3s;
+    transition: ease-in-out;
+    color: white;
+
+}
+
+/*media_query*/
+
+@media screen and (max-width: 1024px) {
+    .links {
+        /* display: none; */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        text-align: center;
+    }
+
+    .links ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        width: 70vw;
+        padding: 30px 0px;
+    }
+
+    .show {
+        transform: translateX(0%);
+        transition: 0.5s all;
+    }
+
+    .links ul a {
+        color: #ffff;
+    }
+
+    .about_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
